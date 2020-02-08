@@ -11,7 +11,7 @@ class dropNode {
     dropB: number
     nextDrop: dropNode
     constructor() {
-        //Create new sprite at random led on top of the screen
+        //Create new drop location at random led on top of the screen
         this.dropX = Math.randomRange(0, 4)
         this.dropY = 0
         //Sets a random brightness
@@ -44,7 +44,7 @@ class droplets {
         }
     }
     fall() {
-        //When a drop reaches the end of screen, delete sprite and move head to next element
+        //When a drop reaches the end of screen, delete node and move head to next element
         while (this.head.dropY == 4) {
             led.unplot(this.head.dropX, this.head.dropY)
             this.head = this.head.nextDrop
